@@ -27,22 +27,44 @@ A Doctor Doom themed setup for [Omarchy](https://omarchy.org) / Hyprland.
 - ✅ Waybar with gold clock + green icons
 - ✅ Mako notifications with green border
 
+## Dependencies
+
+- `awww` — wallpaper daemon para soporte multi-monitor:
+```bash
+  yay -S awww
+```
+- `imagemagick` — genera el crop del wallpaper secundario:
+```bash
+  sudo pacman -S imagemagick
+```
+
 ## Installation
 
 ### Theme
-\`\`\`bash
+```bash
 mkdir -p ~/.config/omarchy/themes/omarchy-doom-splatter/backgrounds
 cp colors.toml ~/.config/omarchy/themes/omarchy-doom-splatter/
 cp backgrounds/* ~/.config/omarchy/themes/omarchy-doom-splatter/backgrounds/
 omarchy-theme-set omarchy-doom-splatter
-\`\`\`
+```
+
+### Secondary monitor (portrait)
+
+Si tienes un monitor secundario en orientación portrait, agrega estas líneas a `~/.config/hypr/autostart.conf`:
+
+```bash
+exec-once = awww-daemon
+exec-once = awww img --outputs HDMI-A-1 ~/.config/omarchy/themes/omarchy-doom-splatter/backgrounds/doom-splatter-secondary.jpg
+```
+
+> Reemplaza `HDMI-A-1` con el nombre de tu monitor (`hyprctl monitors` para verificar).
 
 ### Extras (optional)
-\`\`\`bash
+```bash
 cp extras/mako.config ~/.config/mako/config && makoctl reload
 cp extras/waybar-style.css ~/.config/waybar/style.css && omarchy-restart-waybar
 cp extras/looknfeel.conf ~/.config/hypr/looknfeel.conf && hyprctl reload
-\`\`\`
+```
 
 > "Behold! The most arcane powers of the multiverse are mere tools in service of Doom's ambition."
 
