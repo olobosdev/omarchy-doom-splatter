@@ -1,0 +1,27 @@
+# Doom Splatter · Austin Spencer · Omarchy
+# negro puro · verde neón · plata · dorado · cyan
+
+accent             = "#F1B100"
+cursor             = "#00E500"
+foreground         = "#C6D7E0"
+background         = "#050505"
+
+selection_foreground = "#050505"
+selection_background = "#007200"
+
+color0  = "#050505"
+color1  = "#B70000"
+color2  = "#004500"
+color3  = "#B77F00"
+color4  = "#005A6A"
+color5  = "#2A3A2A"
+color6  = "#007200"
+color7  = "#8FA1A1"
+color8  = "#141614"
+color9  = "#D42020"
+color10 = "#00E500"
+color11 = "#F1B100"
+color12 = "#0099B7"
+color13 = "#007200"
+color14 = "#00A800"
+color15 = "#C6D7E0"
