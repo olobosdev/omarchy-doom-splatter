@@ -45,3 +45,14 @@ cp extras/looknfeel.conf ~/.config/hypr/looknfeel.conf && hyprctl reload
 \`\`\`
 
 > "Behold! The most arcane powers of the multiverse are mere tools in service of Doom's ambition."
+
+## Icons (optional)
+
+For matching green folder icons, install the Tela icon theme:
+
+```bash
+yay -S tela-icon-theme
+gsettings set org.gnome.desktop.interface icon-theme "Tela-green-dark"
+```
+
+You can also apply it through the GUI with `nwg-look`.
